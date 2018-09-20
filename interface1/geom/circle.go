@@ -1,4 +1,4 @@
-package main
+package geom
 
 import (
 	"fmt"
@@ -6,20 +6,20 @@ import (
 )
 
 type Circle struct {
-	radius float64
+	Radius float64
 }
 
 func (c Circle) Area() float64 {
-	return math.Pi * c.radius * c.radius
+	return math.Pi * c.Radius * c.Radius
 }
 
 func (c Circle) Perimeter() float64 {
-	return 2 * math.Pi * c.radius
+	return 2 * math.Pi * c.Radius
 }
 
 func (c Circle) String() string {
 	return fmt.Sprintf(
-		"CIRCLE [radius=%.3f]",
-		c.radius,
+		"CIRCLE [Radius=%.3f]",
+		c.Radius,
 	)
 }
